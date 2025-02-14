@@ -1,0 +1,8 @@
+<div class="py-1">
+  <button
+    [id]="input.id"
+    [name]="input.name"
+    [ngStyle]="{ border: input.border.size + ' solid ' + input.border.color }"
+    (click)="onClick.emit()"
+  >{{ input.caption }}</button>
+</div>

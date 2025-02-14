@@ -1,0 +1,74 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-10">
+  <div class="px-6 py-4">
+    <h2 class="text-xl font-semibold">Settings</h2>
+  </div>
+  <ng-container [formGroup]="inputForm">
+    <div>
+      <h6 class="my-1 uppercase">Name</h6>
+      <input
+        type="text"
+        formControlName="name"
+        class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <p class="text-red-500 text-sm" *ngIf="inputForm.controls['name'].invalid">
+        Name must be at least 5 chars and max 10 chars
+      </p>
+    </div>
+    <ng-container formGroupName="border">
+      <div>
+        <h6 class="my-1 uppercase">Size</h6>
+        <input
+          type="text"
+          formControlName="size"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div>
+        <h6 class="my-1 uppercase">Color</h6>
+        <input
+          type="text"
+          formControlName="color"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </ng-container>
+    <ng-container *ngIf="inputForm.controls['placeholder']">
+      <div>
+        <h6 class="my-1 uppercase">Placeholder</h6>
+        <input
+          type="text"
+          formControlName="placeholder"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </ng-container>
+    <ng-container *ngIf="inputForm.controls['cols']">
+      <div>
+        <h6 class="my-1 uppercase">Cols</h6>
+        <input
+          type="text"
+          formControlName="cols"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div>
+        <h6 class="my-1 uppercase">Rows</h6>
+        <input
+          type="text"
+          formControlName="rows"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </ng-container>
+    <ng-container *ngIf="inputForm.controls['caption']">
+      <div>
+        <h6 class="my-1 uppercase">Caption</h6>
+        <input
+          type="text"
+          formControlName="caption"
+          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

@@ -1,0 +1,12 @@
+<div class="py-1">
+  <textarea
+    [id]="input.id"
+    [name]="input.name"
+    type="text"
+    [ngStyle]="{ border: input.border.size + ' solid ' + input.border.color }"
+    [cols]="input.cols"
+    [rows]="input.rows"
+    readonly
+    (click)="onClick.emit()"
+  ></textarea>
+</div>
